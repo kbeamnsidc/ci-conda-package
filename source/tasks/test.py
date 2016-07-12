@@ -7,7 +7,7 @@ def flake8():
     run flake8 syntax checking
     """
 
-    run('flake8 . --verbose')
+    run('flake8 --config=.flake8 . --verbose')
 
 
 @task
