@@ -1,0 +1,37 @@
+package:
+  name: ci-conda-package
+  version: "0.1.0"
+
+source:
+  path: ../
+
+build:
+  script: invoke test && python setup.py install
+  # entry_points:
+  #   - command = package.module:function
+
+requirements:
+  build:
+    - python 2.7*
+    - invoke
+    - flake8
+    - flake8-quotes
+    - nose
+    - nose-exclude
+  run:
+    - python 2.7*
+
+# test:
+#  imports:
+#    # anything that should be importable from your package
+#    # - import foo
+#    # - from foo import bar
+#  commands:
+#    # commands to run post-install of package to test entry_points
+#    # - command --help
+#    # - command --version
+
+about:
+  home: https://bitbucket.org/nsidc/ci-conda-package
+  license: GPLv3
+  summary: Project to test various CI-as-a-service solutions

@@ -1,0 +1,13 @@
+:yaml:
+  :datadir: .
+:hierarchy:
+  - "puppet/%{environment}"
+  - puppet/hiera
+  - scm_creds
+  - vagrant-nsidc
+:merge_behavior: deeper
+
+classes:
+  - nsidc_emacs
+  - nsidc_nfs
+  - nsidc_os_repo
